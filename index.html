@@ -168,6 +168,12 @@
     },
     function(error) {
       console.error('Error loading model:', error);
+      console.error('Error details:', {
+        message: error.message,
+        type: error.type,
+        target: error.target
+      });
+      alert('Failed to load 3D model. Check console for details.');
     }
   );
 
