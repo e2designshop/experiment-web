@@ -4,21 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  .viewer-module { display: flex; gap: 40px; align-items: center; max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: #333; }
+  .viewer-module { display: flex; gap: 60px; align-items: center; max-width: 1200px; margin: 80px auto; padding: 0 40px; }
   .viewer-module .text-content { flex: 1; }
-  .viewer-module .text-content h2 { font-size: 32px; font-weight: 700; color: #222; margin: 0 0 16px; line-height: 1.2; }
-  .viewer-module .text-content p { font-size: 16px; color: #555; line-height: 1.6; margin: 0 0 12px; }
-  .viewer-module .viewer-container { flex: 1; position: relative; height: 500px; background: #f8f9fa; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .viewer-module .text-content h2 { font-size: 36px; font-weight: 300; color: #003057; margin: 0 0 24px; line-height: 1.2; letter-spacing: -0.5px; }
+  .viewer-module .text-content p { font-size: 17px; color: #555; line-height: 1.7; margin: 0 0 18px; font-weight: 300; }
+  .viewer-module .text-content p:last-child { margin-bottom: 0; }
+  .viewer-module .viewer-container { flex: 1; position: relative; height: 550px; background: #fff; border-radius: 0; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
   #viewer-canvas { width: 100%; height: 100%; }
-  .viewer-controls { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
-  .viewer-controls button { font-family: sans-serif; font-size: 13px; padding: 8px 16px; border-radius: 8px; border: none; background: rgba(255,255,255,0.9); cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1); color: #333; font-weight: 500; transition: all 0.2s; }
-  .viewer-controls button:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-  .viewer-info { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #666; background: rgba(255,255,255,0.85); padding: 4px 12px; border-radius: 20px; backdrop-filter: blur(4px); }
+  .viewer-controls { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 10; }
+  .viewer-controls button { font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 10px 20px; border-radius: 0; border: 2px solid #003057; background: #fff; cursor: pointer; color: #003057; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.2s; }
+  .viewer-controls button:hover { background: #003057; color: #fff; }
+  .viewer-info { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-size: 12px; color: #666; background: rgba(255,255,255,0.95); padding: 6px 16px; border-radius: 0; font-weight: 300; letter-spacing: 0.3px; }
   
   @media (max-width: 768px) {
-    .viewer-module { flex-direction: column; gap: 30px; }
+    .viewer-module { flex-direction: column; gap: 40px; padding: 0 20px; margin: 40px auto; }
     .viewer-module .viewer-container { height: 400px; }
-    .viewer-module .text-content h2 { font-size: 26px; }
+    .viewer-module .text-content h2 { font-size: 28px; }
   }
 </style>
 </head>
@@ -26,9 +31,10 @@
 
 <div class="viewer-module">
   <div class="text-content">
-    <h2>Explore Our Lattice Structure</h2>
-    <p>The 765 kilovolt lattice dead-end tower is a vital component of the PowerOn Midwest transmission line, designed to efficiently transport power over long distances. Standing between 150 and 175 feet tall and spanning 140 to 150 feet wide, this resilient structure minimizes environmental impact by requiring fewer towers than lower-capacity lines. This technology provides critical backup power pathways to consistently deliver energy across the region. </p>
-    <p>Use your mouse or touch to rotate, zoom, and explore the 3D model in real-time to view the tower's structural design and learn how it supports grid reliability for Great River Energy.</p>
+    <h2>Innovative Lattice Structure Design</h2>
+    <p>This advanced lattice structure exemplifies our commitment to engineering excellence. Through careful analysis and optimization, we've developed a solution that maximizes structural performance while minimizing material use.</p>
+    <p>Our employee-owners approach every detail with precision and dedication, ensuring that each project meets the highest standards of quality and innovation.</p>
+    <p>Explore the 3D model to see the intricate design elements that make this structure both efficient and elegant.</p>
   </div>
   
   <div class="viewer-container">
