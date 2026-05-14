@@ -152,7 +152,7 @@
     const size = box.getSize(new THREE.Vector3());
     const maxDim = Math.max(size.x, size.y, size.z);
     obj.position.sub(center);
-    spherical.radius = maxDim * 2;
+    spherical.radius = maxDim * 1.3;
     target.set(0, 0, 0);
     updateCamera();
   }
