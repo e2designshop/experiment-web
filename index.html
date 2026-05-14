@@ -79,7 +79,6 @@
   let prevX = 0, prevY = 0;
   let spherical = { theta: 0, phi: Math.PI / 3, radius: 5 };
   let target = new THREE.Vector3(0, 0, 0);
-  let wireframe = false;
   let currentModel = null;
   const steelGray = new THREE.MeshStandardMaterial({ color: 0x8a9ba8, metalness: 0.4, roughness: 0.5 });
 
@@ -185,11 +184,6 @@
     if (currentModel) fitModel(currentModel);
   });
   
-  document.getElementById('btn-wire').addEventListener('click', function() {
-    wireframe = !wireframe;
-    this.textContent = wireframe ? 'Solid' : 'Wireframe';
-    if (currentModel) currentModel.traverse(c => { if (c.isMesh) c.material.wireframe = wireframe; });
-  });
 
   window.addEventListener('resize', () => {
     camera.aspect = container.offsetWidth / container.offsetHeight;
