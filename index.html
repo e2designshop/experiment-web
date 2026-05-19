@@ -160,7 +160,7 @@
     modelURL,
     function(gltf) {
       currentModel = gltf.scene;
-      currentModel.rotation.x = Math.PI;
+      currentModel.rotation.x = 0;
       currentModel.rotation.y = Math.PI / 2;
       applyMaterial(currentModel);
       scene.add(currentModel);
